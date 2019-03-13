@@ -1,8 +1,13 @@
-function [u]= GalerkinMethod(N,f,b,g) ;
+function [u]= GalerkinMethod(N,f,b,g,lambda)
 syms x % 
-N_1 = subs(N,1) ;B = diff(N,x); 
-BtB = B.'*B ;  K = int(BtB,0,1) ; 
-F= int(N.'*f,0,1) + N_1.'*b  ; 
-r = 1; l = 2:length(N) ; 
+
+N_1 = subs(N,1); 
+B = diff(N,x); 
+BtB = B.'*B ; 
+K = int(BtB,0,1)-lambda*int(N.'*N,0,1); 
+F= int(N.'*f,0,1) + N_1.'*b; 
+
+r = 1; l = 2:length(N);
+
 dl = K(l,l)\(F(l)-K(l,r)*g); 
 u  = g + N(l)*dl; 

@@ -1,6 +1,6 @@
 set(groot, 'DefaultTextInterpreter', 'default');
-set(groot, 'defaultAxesTickLabelInterpreter','default'); 
-set(groot, 'defaultLegendInterpreter','default');
+set(groot, 'defaultAxesTickLabelInterpreter','latex'); 
+set(groot, 'defaultLegendInterpreter','latex');
 
 clc ; % Clean the command window
 clear all  ; % Clean the workspace 

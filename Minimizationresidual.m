@@ -1,9 +1,9 @@
 function [u, d]= Minimizationresidual(N,f,b,g) 
 syms x 
 %%%% Derivatives 
-derN = diff(N,x) ; 
-dderN = diff(derN) ; 
-N0 = subs(N,0) ; % Functions at x = 0; 
+derN = diff(N,x); 
+dderN = diff(derN); 
+N0 = subs(N,0); % Functions at x = 0; 
 derN1 = subs(derN,1) ;  % Deriv. at x = 1 ; 
 INTG = 2*(dderN.'*dderN)  ;
 K = int(INTG,0,1) ;  % Matrix K 
