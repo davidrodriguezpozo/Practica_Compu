@@ -5,6 +5,6 @@ for i=1:nelements
     Fe(i,1) = -(he*COOR(i)*(COOR(i) + COOR(i+1)))/3;
     Fe(i,2) = -(he*COOR(i+1)*(COOR(i) + COOR(i+1)))/3;
 end
-Fe(nelements) = Fe(nelements)+b;
+Fe(nelements,2) = Fe(nelements,2)+b;
 end
 

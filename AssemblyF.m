@@ -2,7 +2,7 @@ function F = AssemblyF(COOR,CN,b)
 nelem = size(CN,1) ; % Number of rows and columns SIZE
 nnode = nelem+1 ;
 nnodeE = size(CN,2) ;
-F = zeros(nnode, nnode) ;
+F = zeros(nnode, 1) ;
 for e=1:nelem  % Loop over number of elements 
     % Element matrix
     NODOSe = CN(e,:);    % Global numbering of nodes of element "e"
