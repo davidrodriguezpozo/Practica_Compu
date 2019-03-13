@@ -34,6 +34,6 @@ F = AssemblyF(COOR,CN,lambda);
 
 d = zeros(nnode,1);
 d(r) = g;
-d(l) = k(l,l)\(F(l)-K(l,r)*d(r));
+d(l) = K(l,l)\(F(l)-K(l,r)*d(r));
 
-plot(Coord,d);
+plot(COOR,d);
