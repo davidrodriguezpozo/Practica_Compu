@@ -43,6 +43,7 @@ xlabel('x') ;
 ylabel('u'); 
 
 %%%
+
 h1 = ezplot(uexact,0,1);
 h2 = ezplot(uapprox1,[0,1]);
 h3 = ezplot(uapprox2,[0,1]);
